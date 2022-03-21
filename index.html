@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Blackness</title>
+    <style language="css">
+      body {
+        background-color: #000;
+        overflow: hidden;
+      }
+      #blackness {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript">
+      var fullscreen = false;
+
+      window.addEventListener('load', function(){
+        var blackness = document.getElementById("blackness");
+        blackness.addEventListener('click', function(){
+          toggleFullscreen();
+        });
+      })
+
+      function toggleFullscreen(){
+        if(fullscreen){
+          document.exitFullscreen();
+          fullscreen = false;
+        } else {
+          blackness.requestFullscreen();
+          fullscreen = true;
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+    <div id="blackness">
+    </div>"
+  </body>
+</html>
