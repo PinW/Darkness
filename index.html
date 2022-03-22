@@ -10,6 +10,9 @@
         width: 100%;
         height: 100%;
       }
+      .fullscreen {
+        cursor: none;
+      }
     </style>
     <script type="text/javascript">
       var fullscreen = false;
@@ -25,9 +28,11 @@
         if(fullscreen){
           document.exitFullscreen();
           fullscreen = false;
+          blackness.classList.remove('fullscreen');
         } else {
           blackness.requestFullscreen();
           fullscreen = true;
+          blackness.classList.add('fullscreen');
         }
       }
     </script>
